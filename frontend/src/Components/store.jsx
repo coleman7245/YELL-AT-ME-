@@ -13,7 +13,7 @@ const useStore = create((set, get) => ({
         const posts = await res.json();
         return posts
     }
-})
+}))
   
 
 export default useStore;

@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/api/users', userRoutes)
-app.get('/api/users', postRoutes)
+app.get('/api/posts', postRoutes)
 
 app.listen(port, ()=> {
     console.log(`connected ${port}`)

@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const PostCreation = ({username, comment}) => {
+const PostCreation = ({ username, comment }) => {
   return (
     <form>
-        
-        <label>COMMENT: </label> <br/>
-        <input className='comments' type='text' placeholder='ENTER COMMENTS HERE!'></input> 
-        <br/>
-       
-       
-        <button>POST!</button> 
+      <label>COMMENT: </label> <br />
+      <input
+        className="comments"
+        type="text"
+        placeholder="ENTER COMMENTS HERE!"
+      ></input>
+      <button>POST!</button>
     </form>
-  )
-}
+  );
+};
 
-export default PostCreation
+export default PostCreation;

@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
 function validator(body) {
-    if (!body || !body.substr(body.length - 4, body.length - 1).includes('!!!'))
+    if (!body || !body.substring(body.length - 4, body.length - 1).includes('!!!'))
         return false;
 
     for (let i = 0; i < body.length; i++) {
@@ -12,11 +12,12 @@ function validator(body) {
     return true;
 }
 
-const postSchema = new mongoose.postSchema({
-    userId: { type: String, required: true },
-    title: { type: String, required: true },
-    content: { type: String, required: true, validate: [validator, 'not yelling enough']},
-   createdAt: { type: String, required: true }
+const postSchema = new mongoose.Schema({
+    user: { type: String, required: true },
+    body: { type: String, required: true },
+    comments: { type: Array, required: true},
+    exclamations: { type: Number, default: 0 },
+    createdAt: { type: String, default: new Date() }
 })
 
-export default module("Post", postSchema)
+export default mongoose.model("Post", postSchema)

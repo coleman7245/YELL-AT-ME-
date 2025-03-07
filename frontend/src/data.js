@@ -60,3 +60,6 @@ let frustrationObjects = [
         exclamations: 3,
     }
 ];
+
+
+export default frustrationObjects

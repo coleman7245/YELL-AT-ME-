@@ -23,7 +23,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
     const { email, password} = req.body;
 
-    if (!user || !(await user.matchPassword(password))) {
+    if (!User || !(await User.matchPassword(password))) {
         return res.status(400).json({ message: 'Invalid credentials' })
     }
 

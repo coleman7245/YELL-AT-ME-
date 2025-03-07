@@ -2,10 +2,10 @@ import express from "express"
 import cors from "cors"
 import "dotenv/config"
 import connectDB from "./db.js"
-import userRoutes from "./routes/userRoutes"
-import postRoutes from "./routes/postRoutes"
-
-dotenv.config()
+// import userRoutes from './routes/userRoutes.js'
+// import postRoutes from './routes/postRoutes.js';
+import Post from './models/Post.js';
+// import User from './models/User.js';
 
 connectDB()
 
@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/api/users', userRoutes)
-app.get('/api/posts', postRoutes)
+app.get('/api/users', postRoutes)
 
 app.listen(port, ()=> {
     console.log(`connected ${port}`)

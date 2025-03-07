@@ -1,0 +1,32 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+
+  input {
+    padding: 5px 20px;
+    margin: 10px;
+  }
+}
+.search-button {
+  background-color: rgb(245, 230, 245);
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+/* Post component */
+.posts-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  height: 280px;
+  width: 333px;
+  border: 1px solid gray;
+  margin: 20px;
+  color: black;
+  border-radius: 10px;
+  padding-left: 15px;
+  background-color: rgb(245, 230, 245);
+}

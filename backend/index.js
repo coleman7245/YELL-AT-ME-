@@ -2,13 +2,17 @@ import express, { application } from "express"
 import cors from "cors"
 import "dotenv/config"
 import connectDB from "./db.js"
-import Post from "./module/Model.js"
+import userRoutes from "./routes/userRoutes"
+import postRoutes from "./routes/postRoutes"
+
+dotenv.config()
+
+connectDB()
 
 const app = express()
 const port = 8080
 
 app.use(express.json())
-
 app.use(cors())
 
 app.get("/", (req,res)=> {
@@ -55,7 +59,6 @@ app.put("")
 
 app.listen(port, ()=> {
     console.log(`connected ${port}`)
-    connectDB()
 })
 
 
